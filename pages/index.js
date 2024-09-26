@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
 
@@ -30,7 +31,7 @@ export default function Index({ posts, globalData }) {
 
                 {post.data.date && (
                   <p className="mb-3 font-bold uppercase opacity-60">
-                    {post.data.date}
+                    {dayjs(post.data.date).format("MMM DD, YYYY")}
                   </p>
                 )}
                 <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
