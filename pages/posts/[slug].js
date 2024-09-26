@@ -42,7 +42,7 @@ export default function PostPage({
         description={frontMatter.description}
       />
       <Header name={globalData.name} />
-      <article className="px-6 md:px-0">
+      <article className="px-6 md:px-0 w-full">
         <header>
           <h1 className="mb-12 text-3xl text-center md:text-5xl dark:text-white">
             {frontMatter.title}
@@ -52,7 +52,7 @@ export default function PostPage({
           )}
         </header>
         <main>
-          <article className="prose dark:prose-dark">
+          <article className="prose dark:prose-dark mx-auto">
             <MDXRemote {...source} components={components} />
           </article>
         </main>
