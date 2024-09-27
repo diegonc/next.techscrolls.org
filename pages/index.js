@@ -19,7 +19,7 @@ export default function Index({ posts, globalData }) {
           {globalData.blogTitle}
         </h1>
         <ul className="w-full">
-          {posts.sort((a,b) => a.filePath < b.filePath ? 1 : a.filePath > b.filePath ? -1 : 0).map((post) => (
+          {posts.map((post) => (
             <li
               key={post.filePath}
               className="transition bg-white border border-b-0 border-gray-800 md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 dark:border-white border-opacity-10 dark:border-opacity-10 last:border-b hover:border-b hovered-sibling:border-t-0"
